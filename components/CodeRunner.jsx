@@ -5,13 +5,10 @@ import { useEffect, useRef, useState } from "react";
 const MonacoEditor = dynamic(() => import("@monaco-editor/react"), { ssr: false });
 
 export default function CodeRunner() {
-  const [code, setCode] = useState(`# Example using NumPy
-import numpy as np
+  const [code, setCode] = useState(`# Example using Python
 
-a = np.arange(9).reshape(3,3)
-print("Array:")
-print(a)
-print("Sum:", a.sum())
+print("Hello World!")
+
 `);
   const [output, setOutput] = useState("");
   const [isError, setIsError] = useState(false);
@@ -146,7 +143,7 @@ finally:
   return (
     <div className="min-h-screen bg-[#1e1e1e] text-white p-6">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-4 text-center">🐍 Pyodide Python Runner (NumPy ready)</h1>
+        <h1 className="text-3xl font-bold mb-4 text-center">🐍 Pyodide Python Runner</h1>
 
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
@@ -154,7 +151,7 @@ finally:
             {pyLoading ? (
               <span className="text-sm text-yellow-300">Loading Python runtime…</span>
             ) : (
-              <span className="text-sm text-green-300">Runtime ready (NumPy loaded)</span>
+              <span className="text-sm text-green-300">Runtime ready loaded</span>
             )}
           </div>
 
