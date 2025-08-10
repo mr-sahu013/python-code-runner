@@ -143,7 +143,7 @@ finally:
   return (
     <div className="min-h-screen bg-[#1e1e1e] text-white p-6">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-4 text-center">🐍 Pyodide Python Runner</h1>
+        <h1 className="text-3xl font-bold mb-4 text-center">🐍 Python Runner</h1>
 
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
