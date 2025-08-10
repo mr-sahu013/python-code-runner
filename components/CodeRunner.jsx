@@ -6,7 +6,7 @@ import axios from "axios";
 const MonacoEditor = dynamic(() => import("@monaco-editor/react"), { ssr: false });
 
 export default function CodeRunner() {
-  const [code, setCode] = useState("# Write your Python code here");
+  const [code, setCode] = useState("# Write your Python code here\nprint('Hello, World!')");
   const [output, setOutput] = useState("");
   const [isError, setIsError] = useState(false);
   const [loading, setLoading] = useState(false);

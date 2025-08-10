@@ -20,7 +20,10 @@ export async function POST(req) {
       }
 
       resolve(
-        new Response(JSON.stringify({ output, isError }), { status: 200 })
+        new Response(
+          JSON.stringify({ output, isError }),
+          { status: 200, headers: { "Content-Type": "application/json" } }
+        )
       );
     });
   });
